@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goto Users API Documentation</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="../javascript/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="../../index.html">Goto Users API Documentation</a></h1>
+      <a href="#" id="mobile-menu-toggle" class="icon">
+        <i class="las la-bars"></i>
+      </a>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="./getting-started.html">Getting Started</a></li>
+        <li><a href="./user-endpoints.html">User Endpoints</a></li>
+      </ul>
+    </div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="./getting-started.html" class="this-page">Getting Started</a>
+        </li>
+        <li><a href="./user-endpoints.html">User Endpoints</a></li>
+        <!-- <li><a href="./schema-endpoints.html">Schema Endpoints</a></li> -->
+      </ul>
+    </nav>
+    <section class="docs-content">
+      <h2>Getting Started</h2>
+      <p>
+        Goto Users is a large user database for testing, validating, and more.
+      </p>
+      <p>
+        The users are available through the API which is a RESTful API that
+        allows you to acces user data in different ways depending upon the
+        endpoint you use.
+      </p>
+      <p>
+        The Goto Users API base url is:
+        <code>https://serene-garden-99449.herokuapp.com/api/v1</code>
+      </p>
+      <p>
+        No authentication is currently required to access the API, but in the
+        future it will be added to meter & collect usage data along with
+        allowing for account specific features.
+      </p>
+      <h3>Example Request</h3>
+
+      <p>
+        <code
+          >https://serene-garden-99449.herokuapp.com/api/v1/users/getOneUser</code
+        >
+      </p>
+      <p>
+        This endpoint will return one random user, as a JSON object in the
+        following format:
+      </p>
+      <p>
+        (A full list of user endpoints can be found
+        <a href="/frontend/docs/user-endpoints.html">here</a>)
+      </p>
+      <pre><code class="block">{
+  "_id": "627cc3181683b442bc0dc14e",
+  "record": {
+    "firstName": "Becky",
+    "lastName": "Wilson",
+    "age": 39,
+    "email": "becky.wilson@example.com",
+    "dob": "1983-05-02T16:12:23.983Z"
+  },
+  "id": "290-82-9697",
+  "company": "Stamm, Durgan and Renner",
+  "jobTitle": "Microbiologist",
+  "registration": {
+    "registrationDate": "2010-08-28T07:42:32.540Z"
+  },
+  "location": {
+    "country": "United States",
+    "state": "Hawaii",
+    "city": "Jacksonville",
+    "address": "3736 W Belt Line Rd"
+  },
+  "phone": "(178)-426-5749",
+  "__v": 0
+}</code></pre>
+      <h3>User Object</h3>
+      <p>The user object contains the follow fields:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_id</td>
+            <td>String</td>
+            <td>The unique identifier for the user</td>
+          </tr>
+          <tr>
+            <td>record</td>
+            <td>Object</td>
+            <td>The user's record</td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>String</td>
+            <td>The user's ID</td>
+          </tr>
+          <tr>
+            <td>company</td>
+            <td>String</td>
+            <td>The user's company</td>
+          </tr>
+          <tr>
+            <td>jobTitle</td>
+            <td>String</td>
+            <td>The user's job title</td>
+          </tr>
+          <tr>
+            <td>registration</td>
+            <td>Object</td>
+            <td>The user's registration information</td>
+          </tr>
+          <tr>
+            <td>location</td>
+            <td>Object</td>
+            <td>The user's location information</td>
+          </tr>
+          <tr>
+            <td>phone</td>
+            <td>String</td>
+            <td>The user's phone number</td>
+          </tr>
+          <tr>
+            <td>__v</td>
+            <td>Number</td>
+            <td>The version of the user</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>User Records</h4>
+      <p>The user record contains the following fields:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>firstName</td>
+            <td>String</td>
+            <td>The user's first name</td>
+          </tr>
+          <tr>
+            <td>lastName</td>
+            <td>String</td>
+            <td>The user's last name</td>
+          </tr>
+          <tr>
+            <td>age</td>
+            <td>Number</td>
+            <td>The user's age</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>String</td>
+            <td>The user's email address</td>
+          </tr>
+          <tr>
+            <td>dob</td>
+            <td>Date/String</td>
+            <td>The user's date of birth</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>User Registration</h4>
+      <p>The user registration contains the following fields:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>registrationDate</td>
+            <td>Date/String</td>
+            <td>The date the user registered</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>User Location</h4>
+      <p>The user location contains the following fields:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>country</td>
+            <td>String</td>
+            <td>The user's country</td>
+          </tr>
+          <tr>
+            <td>state</td>
+            <td>String</td>
+            <td>The user's state</td>
+          </tr>
+          <tr>
+            <td>city</td>
+            <td>String</td>
+            <td>The user's city</td>
+          </tr>
+          <tr>
+            <td>address</td>
+            <td>String</td>
+            <td>The user's address</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+      <p>&copy; 2022 Goto Users API</p>
+      <p>Created by: Daniel Carmichael & Brandon Mikowski</p>
+    </footer>
+  </body>
+</html>
