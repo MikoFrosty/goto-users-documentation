@@ -31,7 +31,7 @@ $("#get-user-button")
     const getUserResult = $("#get-user-result");
 
     //const API = new FetchWrapper("http://localhost:3000/api/v1/users/"); // For testing on local server
-    const API = new FetchWrapper("https://serene-garden-99449.herokuapp.com/api/v1/users/");
+    const API = new FetchWrapper("https://gotousers.herokuapp.com/api/v1/users/");
 
     API
       .get("getOneUser")
